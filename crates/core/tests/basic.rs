@@ -5,7 +5,7 @@ use lottie_core::prelude::Model;
 
 #[test]
 fn test_bouncy_ball_example() -> Result<(), Error> {
-    let file = fs::File::open("../../fixtures/ui/lottie-ios-samples/Nonanimating/FirstText.json")?;
+    let file = fs::File::open("../../fixtures/ui/bouncy_ball.json")?;
     let d = &mut serde_json::Deserializer::from_reader(file);
     let _: Model = match serde_path_to_error::deserialize(d) {
         Ok(m) => m,
