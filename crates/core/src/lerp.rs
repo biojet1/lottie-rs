@@ -1,4 +1,4 @@
-use crate::model::{Bezier, GradientColor, Rgb, Vector2D};
+use crate::model::{Bezier, GradientColor, Rgb, Rgba, Vector2D};
 
 pub trait Lerp {
     type Target;
@@ -66,7 +66,7 @@ impl Lerp for Vec<GradientColor> {
                 let o = y.offset + (x.offset - y.offset) * t;
                 GradientColor {
                     offset: o,
-                    color: Rgba::new_f32(r, g, b, a),
+                    color: Rgba::new_u8(r, g, b, a),
                 }
             })
             .collect()
