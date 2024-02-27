@@ -30,7 +30,7 @@ jobs:
           components: rustfmt, clippy
           
     - name: Build
-      run: cargo build --manifest-path crates/core/Cargo.toml
+      run: cargo build
       
     - name: Run tests
-      run: cargo test --manifest-path crates/core/Cargo.toml
+      run: cargo test
